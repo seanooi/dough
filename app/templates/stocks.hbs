@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-lg-3">
+    {{input type="text" class="form-control" placeholder="Search company name" value=searchString key-up="searchSymbol"}}
+    <hr />
+     <ul class="list-group">
+        {{#each model as |stock|}}
+          <li class="list-group-item {{if stock.isSelected 'selected'}}" {{action "getStock" stock}}>
+            <h4>{{stock.name}}</h4>
+            <p>{{stock.symbol}}</p>
+          </li>
+        {{/each}}
+      </ul>
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-9">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{stockName}}</h3>
+      </div>
+      <div class="panel-body">
+        <div class="chart"></div>
+      </div>
+    </div>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->

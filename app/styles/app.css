@@ -1,0 +1,20 @@
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: optimizeSpeed;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: #ADD8E6;
+  stroke-width: 1.5px;
+}
+
+.selected {
+	background-color: #ADD8E6;
+}
